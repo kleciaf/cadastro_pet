@@ -1,0 +1,37 @@
+<%= form_with(model: paciente) do |form| %>
+  <% if paciente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+
+      <ul>
+        <% paciente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :foto %>
+    <%= form.text_field :foto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_animal %>
+    <%= form.text_field :nome_animal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_dono %>
+    <%= form.text_field :nome_dono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf_cnpj_dono %>
+    <%= form.text_field :cpf_cnpj_dono %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

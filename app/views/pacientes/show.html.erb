@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @paciente.foto %>
+</p>
+
+<p>
+  <strong>Nome animal:</strong>
+  <%= @paciente.nome_animal %>
+</p>
+
+<p>
+  <strong>Nome dono:</strong>
+  <%= @paciente.nome_dono %>
+</p>
+
+<p>
+  <strong>Cpf cnpj dono:</strong>
+  <%= @paciente.cpf_cnpj_dono %>
+</p>
+
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
+<%= link_to 'Back', pacientes_path %>
