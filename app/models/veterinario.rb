@@ -1,2 +1,3 @@
 class Veterinario < ApplicationRecord
-end
+    has_many :pacientes
+end 
